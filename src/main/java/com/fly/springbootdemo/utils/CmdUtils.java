@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.*;
 
+import static com.fly.springbootdemo.utils.CmdUtils.execCmd;
+
 public class CmdUtils {
     private static final ExecutorService executorService = Executors.newFixedThreadPool(6);
 
@@ -46,5 +48,24 @@ class ReaTask implements Callable<String> {
         }
         br.close();
         return sb.toString();
+    }
+
+    public static void main(String[] args) throws InterruptedException, ExecutionException, IOException {
+        /**
+         * 测试
+         */
+        System.out.println(execCmd("cd /Users/Shared;ls"));
+
+        /**
+         * 输出：
+         *
+         * {error=, out=Adobe
+         * AdobeGCInfo
+         * SC Info
+         * adi
+         * defs
+         * }
+         */
+
     }
 }

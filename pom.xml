@@ -67,21 +67,53 @@
 		</dependency>
 
 <!--		http-->
+<!--		unirest-->
 		<dependency>
 			<groupId>com.konghq</groupId>
 			<artifactId>unirest-java</artifactId>
 			<version>3.13.3</version>
 		</dependency>
 
-<!--		json-->
+<!--		rest-assured-->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>4.5.0</version>
+<!--			<scope>test</scope>-->
+			<!-- 排除掉里面的groovy包 -->
+<!--			<exclusions>-->
+<!--				<exclusion>-->
+<!--					<groupId>org.codehaus.groovy</groupId>-->
+<!--					<artifactId>groovy</artifactId>-->
+<!--				</exclusion>-->
+<!--			</exclusions>-->
+		</dependency>
+
+<!--		websocket-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-websocket</artifactId>
+			<version>2.7.1</version>
+		</dependency>
+
+
+
+		<!--		json-->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
 			<version>2.0.5</version>
 		</dependency>
 
+<!--		ASM-->
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm</artifactId>
+            <version>9.3</version>
+        </dependency>
 
-	</dependencies>
+
+    </dependencies>
 
 	<build>
 		<plugins>

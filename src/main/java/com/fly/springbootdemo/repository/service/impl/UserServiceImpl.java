@@ -8,6 +8,6 @@ import com.fly.springbootdemo.repository.service.UserService;
 import org.springframework.stereotype.Service;
 
 @Service
-@DS("slave_2")
+@DS("slave_1")
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 }
