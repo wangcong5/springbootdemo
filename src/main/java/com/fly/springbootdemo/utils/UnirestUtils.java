@@ -1,6 +1,6 @@
 package com.fly.springbootdemo.utils;
 
-import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
@@ -33,12 +33,29 @@ public class UnirestUtils {
         return httpResponse;
     }
 
-    public HttpResponse<JsonNode> PostRequest(String url,Map<String,String> header, Map<String,String> body) {
-        HttpResponse<JsonNode> response = Unirest.post(url)
-                .header("accept", "application/json")
+//    public static HttpResponse<JsonNode> PostRequest(String url,Map<String,String> header, Map<String,String> body) {
+//        HttpResponse<JsonNode> response = Unirest.post(url)
+//                .header("accept", "application/json")
+//
+//                .header("Cookie", "xxx")
+//                .body(JSON.toJSONString(body))
+//
+////                .queryString("apiKey", "123")
+////                .field("name", "张三")
+////                .field("部门", "技术部")
+////                .field("地址", "朝阳")
+//                .asJson();
+//
+//        log.info(response.getBody().toString());
+//        return response;
+//    }
 
-                .header("Cookie", "xxx")
-                .body(JSON.toJSONString(body))
+    public static HttpResponse<JsonNode> PostRequest(String url,Map<String,String> header, String body) {
+        HttpResponse<JsonNode> response = Unirest.post(url)
+                .header("Content-Type", "application/json")
+
+//                .header("Cookie", "xxx")
+                .body(JSONObject.parseObject(body))
 
 //                .queryString("apiKey", "123")
 //                .field("name", "张三")
@@ -50,8 +67,5 @@ public class UnirestUtils {
         return response;
     }
 
-    public static void main(String[] args) {
-
-//        UnirestUtils.getRequest("https://api.androidhive.info/volley/person_object.json");
-    }
+    public static void main(String[] args) {}
 }
