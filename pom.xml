@@ -112,8 +112,32 @@
             <version>9.3</version>
         </dependency>
 
+<!--        javaparser-->
+        <dependency>
+            <groupId>com.github.javaparser</groupId>
+            <artifactId>javaparser-symbol-solver-core</artifactId>
+            <version>3.24.2</version>
+        </dependency>
 
-    </dependencies>
+
+<!--		File转MultipartFile依赖包-->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>5.3.21</version>
+		</dependency>
+
+<!--		小而全的java工具类开源库-->
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>5.8.4</version>
+		</dependency>
+
+
+
+
+	</dependencies>
 
 	<build>
 		<plugins>
