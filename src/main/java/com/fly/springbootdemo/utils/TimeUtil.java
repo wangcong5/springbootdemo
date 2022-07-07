@@ -1,7 +1,5 @@
 package com.fly.springbootdemo.utils;
 
-import com.fly.springbootdemo.common.enums.TimePatternEnum;
-
 import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.LocalDateTime;
